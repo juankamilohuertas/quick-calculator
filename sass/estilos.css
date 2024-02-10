@@ -1,0 +1,23 @@
+.conte__number div:nth-child(1) {
+  background-color: #122;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.conte__number div:nth-child(2) {
+  background-color: #144;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.conte__number div:nth-child(3) {
+  background-color: #166;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.conte__number div:nth-child(4) {
+  background-color: #188;
+  border: 1px solid #fff;
+  color: #fff;
+}/*# sourceMappingURL=estilos.css.map */
