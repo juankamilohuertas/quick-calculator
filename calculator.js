@@ -13,19 +13,27 @@ storedNumber.num2 = "";
 storedNumber.total = "";
 const numeroDigitado = (numero) => {
   conteNumeros.children[numero].addEventListener("click", () => {
-    if (storedNumber.op != "" && storedNumber.op.indexOf(storedNumber.op) != -1)
+    if (storedNumber.op != "" && terminacionOp != true) {
       storedNumber.num2 += numero;
-    else storedNumber.num1 += numero;
+    } else if (terminacionOp != false) {
+      storedNumber.num1 += numero;
+    } else storedNumber.num1 += numero;
     pantallaDom(storedNumber.op, storedNumber.num1, storedNumber.num2);
   });
 };
 /* operadores digitados en pantalla */
 const operadorDigitado = (operador) => {
   operador.addEventListener("click", () => {
-    if (storedNumber.total != undefined) {
+    if (storedNumber.total != undefined && terminacionOp != true) {
       storedNumber.num1 = storedNumber.total;
       storedNumber.op = operador.textContent;
       storedNumber.num2 = "";
+      pantallaDom(storedNumber.op, storedNumber.num1, storedNumber.num2);
+    } else if (terminacionOp != false) {
+      storedNumber.op = operador.textContent;
+      storedNumber.num2 = "";
+      if (storedNumber.num1 == "") storedNumber.num1 = "0";
+      terminacionOp = false;
       pantallaDom(storedNumber.op, storedNumber.num1, storedNumber.num2);
     } else {
       storedNumber.op = operador.textContent;
@@ -66,15 +74,30 @@ const pantallaDom = (op, v1, v2) => {
   if (op == "x") res = converV1 * converV2;
   if (op == "÷") res = converV1 / converV2;
   storedNumber.total = res;
+  pantalla2.innerHTML = `= 0`;
+  borrar(op);
+  return storedNumber.total;
+};
+/* borar todo en pantalla*/
+const borrar = (op) => {
   if (op == "Borrar") {
     storedNumber.op = "";
     storedNumber.num1 = "";
     storedNumber.num2 = "";
     pantalla.innerHTML = "";
   }
-  return storedNumber.total;
 };
 /* mostrando y agregando el resultado en la pantalla */
+let terminacionOp = false;
 valorFinal.addEventListener("click", () => {
-  pantalla2.innerHTML = ` = ${storedNumber.total}`;
+  pantalla2.style.fontSize = "7rem";
+  borrar("Borrar");
+  terminacionOp = true;
+});
+/* valor retornado automaticamente */
+conteNumeros.addEventListener("click", () => {
+  pantalla2.style.fontSize = "5rem";
+  if (storedNumber.num2 != "") {
+    pantalla2.innerHTML = ` = ${storedNumber.total}`;
+  }
 });
