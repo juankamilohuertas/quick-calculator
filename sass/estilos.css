@@ -1,6 +1,7 @@
 body {
   background-color: #000;
   color: #fff;
+  margin: 0;
 }
 
 /* contenedor calculadora */
@@ -8,8 +9,8 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 400px;
-  height: 250px;
+  width: 100%;
+  height: 100vh;
 }
 
 /* numeros */
@@ -17,13 +18,18 @@ body {
   display: flex;
 }
 .conteNumeros__itemNumero {
-  flex-grow: 2;
+  flex-grow: 1;
   display: inline-block;
   background-color: #ff7e7e;
   border: 1px solid;
   cursor: pointer;
   text-align: center;
-  padding: 10px;
+  height: 5rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }
 .conteNumeros__itemNumero:hover {
   background-color: red;
@@ -34,13 +40,18 @@ body {
   display: flex;
 }
 .conteOperadores__itemOperador {
-  flex-grow: 2;
+  flex-grow: 1;
   display: inline-block;
   background-color: #6d8c44;
   border: 1px solid;
   cursor: pointer;
   text-align: center;
-  padding: 10px;
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }
 .conteOperadores__itemOperador:hover {
   background-color: green;
@@ -48,28 +59,39 @@ body {
 
 /* igual (=) */
 .valorFinal {
-  flex-grow: 2;
+  box-sizing: border-box;
+  flex-grow: 1;
   display: inline-block;
-  background-color: #454545;
+  background-color: #15243e;
   border: 1px solid;
   cursor: pointer;
   text-align: center;
-  padding: 10px;
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }
 .valorFinal:hover {
-  background-color: #000;
+  background-color: #0a131c;
 }
 
 /* pantalla */
 .pantalla {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   height: 40%;
-  font-size: 1.5rem;
+  font-size: 3rem;
   padding: 10px;
   background-color: #2e2e2e;
 }
 
 .pantalla2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   height: 60%;
-  font-size: 3rem;
   padding: 5px 10px;
 }/*# sourceMappingURL=estilos.css.map */
