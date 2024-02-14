@@ -2,6 +2,7 @@ body {
   background-color: #000;
   color: #fff;
   margin: 0;
+  overflow: hidden;
 }
 
 /* contenedor calculadora */
@@ -82,7 +83,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 40%;
+  height: 200px;
   font-size: 3rem;
   padding: 10px;
   background-color: #2e2e2e;
@@ -92,6 +93,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 60%;
+  height: 400px;
   padding: 5px 10px;
 }/*# sourceMappingURL=estilos.css.map */

@@ -3,6 +3,7 @@ body
     background-color: #000
     color: #fff
     margin: 0
+    overflow: hidden
 /* contenedor calculadora */
 .conteCalculadora
     display: flex
@@ -33,11 +34,11 @@ body
 /* pantalla */
 .pantalla
     @include mixins.flex(flex-start,center)
-    height: 40%
+    height: 200px
     font-size: 3rem
     padding: 10px
     background-color: #2e2e2e
 .pantalla2
     @include mixins.flex(flex-start,center)
-    height: 60%
+    height: 400px
     padding: 5px 10px
