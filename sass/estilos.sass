@@ -1,27 +1,40 @@
+@use '_mixins'
 body
-    color: white
     background-color: #000
-main
-    display: grid
-    grid-template-columns: 160px 1fr
-    grid-template-rows: 100vh
-header
-    box-sizing: border-box
-    grid-column: 1/span 2
-    grid-row: 1/span 2
-    background-color: #444
-div
-    background-color: #000
-    padding-left: 15px
-    grid-column: 2/span 3
-    grid-row: 1/span 2
-ul
-    padding: 0
-li
-    box-sizing: border-box
-    padding: 10px
-    width: 160px
-    cursor: pointer
-    transition: .5s
+    color: #fff
+/* contenedor calculadora */
+.conteCalculadora
+    display: flex
+    flex-direction: column
+    margin: auto
+    width: 400px
+    height: 250px
+/* numeros */
+.conteNumeros
+    display: flex
+    &__itemNumero
+        @include mixins.botonesCalculadora(#ff7e7e)
+        &:hover
+            background-color: red
+/* operadores */
+.conteOperadores
+    display: flex
+    &__itemOperador
+        @include mixins.botonesCalculadora(#6d8c44)
+        &:hover
+            background-color: green
+/* igual (=) */
+.valorFinal
+    @include mixins.botonesCalculadora(#454545)
     &:hover
-        background-color: #ca2626 !important
+        background-color: #000
+/* pantalla */
+.pantalla
+    height: 40%
+    font-size: 1.5rem
+    padding: 10px
+    background-color: #2e2e2e
+.pantalla2
+    height: 60%
+    font-size: 3rem
+    padding: 5px 10px
