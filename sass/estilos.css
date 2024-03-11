@@ -1,0 +1,99 @@
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* contenedor calculadora */
+.conteCalculadora {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* numeros */
+.conteNumeros {
+  display: flex;
+}
+.conteNumeros__itemNumero {
+  flex-grow: 1;
+  display: inline-block;
+  background-color: #ff7e7e;
+  border: 1px solid;
+  cursor: pointer;
+  text-align: center;
+  height: 5rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.conteNumeros__itemNumero:hover {
+  background-color: red;
+}
+
+/* operadores */
+.conteOperadores {
+  display: flex;
+}
+.conteOperadores__itemOperador {
+  flex-grow: 1;
+  display: inline-block;
+  background-color: #6d8c44;
+  border: 1px solid;
+  cursor: pointer;
+  text-align: center;
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.conteOperadores__itemOperador:hover {
+  background-color: green;
+}
+
+/* igual (=) */
+.valorFinal {
+  box-sizing: border-box;
+  flex-grow: 1;
+  display: inline-block;
+  background-color: #15243e;
+  border: 1px solid;
+  cursor: pointer;
+  text-align: center;
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.valorFinal:hover {
+  background-color: #0a131c;
+}
+
+/* pantalla */
+.pantalla {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 200px;
+  font-size: 3rem;
+  padding: 10px;
+  background-color: #2e2e2e;
+}
+
+.pantalla2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 400px;
+  padding: 5px 10px;
+}/*# sourceMappingURL=estilos.css.map */

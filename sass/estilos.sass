@@ -1,0 +1,45 @@
+@use '_mixins'
+body
+    background-color: #000
+    color: #fff
+    margin: 0
+    height: 100vh
+    overflow: hidden
+/* contenedor calculadora */
+.conteCalculadora
+    display: flex
+    flex-direction: column
+    margin: auto
+    width: 100%
+    height: 100%
+/* numeros */
+.conteNumeros
+    display: flex
+    &__itemNumero
+        @include mixins.botonesCalculadora(#ff7e7e,8rem,5rem)
+        &:hover
+            background-color: red
+/* operadores */
+.conteOperadores
+    display: flex
+    &__itemOperador
+        @include mixins.botonesCalculadora(#6d8c44,8rem,8rem)
+        &:hover
+            background-color: green
+/* igual (=) */
+.valorFinal
+    box-sizing: border-box
+    @include mixins.botonesCalculadora(#15243e,100%,8rem)
+    &:hover
+        background-color: #0a131c
+/* pantalla */
+.pantalla
+    @include mixins.flex(flex-start,center)
+    height: 200px
+    font-size: 3rem
+    padding: 10px
+    background-color: #2e2e2e
+.pantalla2
+    @include mixins.flex(flex-start,center)
+    height: 400px
+    padding: 5px 10px
